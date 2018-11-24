@@ -1,0 +1,31 @@
+
+
+
+<div>
+  <label>BatchName</label>
+  <input id="txthrstaken" [(ngModel)]="batch.BatchName" type="text" >
+</div>
+<div>
+  <label>NUMBER OF HOURS</label>
+  <input id="txthrstaken" [(ngModel)]="batch.HoursTaken" type="text" >
+</div>
+<input type="button" (click)="saveBatchData()" value="save">
+
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th> BATCHNAME</th>
+      <th>HOURSTAKEN</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let bat of batches">
+      <td>{{bat.BatchId}}</td>
+      <td>{{bat.BatchName}}</td>
+      <td>{{bat.HoursTaken}}</td>
+    </tr>
+  </tbody>
+</table>
